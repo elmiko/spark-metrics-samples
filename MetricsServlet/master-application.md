@@ -25,40 +25,22 @@ All output was captured by performing a `GET` request to
     }
   },
   "gauges": {
-    "application.PythonPi.1507650357866.cores": {
+    "application.PythonPi.1507837733004.cores": {
       "value": 8
     },
-    "application.PythonPi.1507650357866.runtime_ms": {
-      "value": 2405
+    "application.PythonPi.1507837733004.runtime_ms": {
+      "value": 2380
     },
-    "application.PythonPi.1507650357866.status": {
+    "application.PythonPi.1507837733004.status": {
       "value": "FINISHED"
     },
-    "application.PythonPi.1507650877411.cores": {
+    "application.PythonPi.1507837790712.cores": {
       "value": 8
     },
-    "application.PythonPi.1507650877411.runtime_ms": {
-      "value": 2320
+    "application.PythonPi.1507837790712.runtime_ms": {
+      "value": 2178
     },
-    "application.PythonPi.1507650877411.status": {
-      "value": "FINISHED"
-    },
-    "application.PythonPi.1507650900220.cores": {
-      "value": 8
-    },
-    "application.PythonPi.1507650900220.runtime_ms": {
-      "value": 2522
-    },
-    "application.PythonPi.1507650900220.status": {
-      "value": "FINISHED"
-    },
-    "application.PythonPi.1507650961955.cores": {
-      "value": 8
-    },
-    "application.PythonPi.1507650961955.runtime_ms": {
-      "value": 2026
-    },
-    "application.PythonPi.1507650961955.status": {
+    "application.PythonPi.1507837790712.status": {
       "value": "FINISHED"
     }
   },
