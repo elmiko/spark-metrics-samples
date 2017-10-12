@@ -10,6 +10,11 @@ The `metrics.properties` file was modified to add the following:
 *.sink.csv.period=10
 *.sink.csv.unit=seconds
 *.sink.csv.directory=/tmp/
+
+master.source.jvm.class=org.apache.spark.metrics.source.JvmSource
+worker.source.jvm.class=org.apache.spark.metrics.source.JvmSource
+driver.source.jvm.class=org.apache.spark.metrics.source.JvmSource
+executor.source.jvm.class=org.apache.spark.metrics.source.JvmSource
 ```
 
 This [tutorial-sparkpi-python-flask](https://github.com/radanalyticsio/tutorial-sparkpi-python-flask)
