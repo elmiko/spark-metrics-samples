@@ -1,0 +1,206 @@
+# GraphiteSink output for the master
+
+The master was started with the `spark-class` command.
+
+This output was captured by performing a `GET` request to
+`http://127.0.0.1:8000/metrics/index.json`. These values are a list of metrics that
+can be further queried by their name.
+
+```
+[
+  "CodeGenerator.compilationTime.count",
+  "CodeGenerator.compilationTime.max",
+  "CodeGenerator.compilationTime.mean",
+  "CodeGenerator.compilationTime.min",
+  "CodeGenerator.compilationTime.p50",
+  "CodeGenerator.compilationTime.p75",
+  "CodeGenerator.compilationTime.p95",
+  "CodeGenerator.compilationTime.p98",
+  "CodeGenerator.compilationTime.p99",
+  "CodeGenerator.compilationTime.p999",
+  "CodeGenerator.compilationTime.stddev",
+  "CodeGenerator.generatedClassSize.count",
+  "CodeGenerator.generatedClassSize.max",
+  "CodeGenerator.generatedClassSize.mean",
+  "CodeGenerator.generatedClassSize.min",
+  "CodeGenerator.generatedClassSize.p50",
+  "CodeGenerator.generatedClassSize.p75",
+  "CodeGenerator.generatedClassSize.p95",
+  "CodeGenerator.generatedClassSize.p98",
+  "CodeGenerator.generatedClassSize.p99",
+  "CodeGenerator.generatedClassSize.p999",
+  "CodeGenerator.generatedClassSize.stddev",
+  "CodeGenerator.generatedMethodSize.count",
+  "CodeGenerator.generatedMethodSize.max",
+  "CodeGenerator.generatedMethodSize.mean",
+  "CodeGenerator.generatedMethodSize.min",
+  "CodeGenerator.generatedMethodSize.p50",
+  "CodeGenerator.generatedMethodSize.p75",
+  "CodeGenerator.generatedMethodSize.p95",
+  "CodeGenerator.generatedMethodSize.p98",
+  "CodeGenerator.generatedMethodSize.p99",
+  "CodeGenerator.generatedMethodSize.p999",
+  "CodeGenerator.generatedMethodSize.stddev",
+  "CodeGenerator.sourceCodeSize.count",
+  "CodeGenerator.sourceCodeSize.max",
+  "CodeGenerator.sourceCodeSize.mean",
+  "CodeGenerator.sourceCodeSize.min",
+  "CodeGenerator.sourceCodeSize.p50",
+  "CodeGenerator.sourceCodeSize.p75",
+  "CodeGenerator.sourceCodeSize.p95",
+  "CodeGenerator.sourceCodeSize.p98",
+  "CodeGenerator.sourceCodeSize.p99",
+  "CodeGenerator.sourceCodeSize.p999",
+  "CodeGenerator.sourceCodeSize.stddev",
+  "HiveExternalCatalog.fileCacheHits.count",
+  "HiveExternalCatalog.filesDiscovered.count",
+  "HiveExternalCatalog.hiveClientCalls.count",
+  "HiveExternalCatalog.parallelListingJobCount.count",
+  "HiveExternalCatalog.partitionsFetched.count",
+  "application.PythonPi.1507914448524.cores",
+  "application.PythonPi.1507914448524.runtime_ms",
+  "carbon.agents.21ec7d289a88-a.avgUpdateTime",
+  "carbon.agents.21ec7d289a88-a.blacklistMatches",
+  "carbon.agents.21ec7d289a88-a.cache.bulk_queries",
+  "carbon.agents.21ec7d289a88-a.cache.overflow",
+  "carbon.agents.21ec7d289a88-a.cache.queries",
+  "carbon.agents.21ec7d289a88-a.cache.queues",
+  "carbon.agents.21ec7d289a88-a.cache.size",
+  "carbon.agents.21ec7d289a88-a.committedPoints",
+  "carbon.agents.21ec7d289a88-a.cpuUsage",
+  "carbon.agents.21ec7d289a88-a.creates",
+  "carbon.agents.21ec7d289a88-a.errors",
+  "carbon.agents.21ec7d289a88-a.memUsage",
+  "carbon.agents.21ec7d289a88-a.metricsReceived",
+  "carbon.agents.21ec7d289a88-a.pointsPerUpdate",
+  "carbon.agents.21ec7d289a88-a.updateOperations",
+  "carbon.agents.21ec7d289a88-a.whitelistRejects",
+  "jvm.PS-MarkSweep.count",
+  "jvm.PS-MarkSweep.time",
+  "jvm.PS-Scavenge.count",
+  "jvm.PS-Scavenge.time",
+  "jvm.heap.committed",
+  "jvm.heap.init",
+  "jvm.heap.max",
+  "jvm.heap.usage",
+  "jvm.heap.used",
+  "jvm.non-heap.committed",
+  "jvm.non-heap.init",
+  "jvm.non-heap.max",
+  "jvm.non-heap.usage",
+  "jvm.non-heap.used",
+  "jvm.pools.Code-Cache.committed",
+  "jvm.pools.Code-Cache.init",
+  "jvm.pools.Code-Cache.max",
+  "jvm.pools.Code-Cache.usage",
+  "jvm.pools.Code-Cache.used",
+  "jvm.pools.Compressed-Class-Space.committed",
+  "jvm.pools.Compressed-Class-Space.init",
+  "jvm.pools.Compressed-Class-Space.max",
+  "jvm.pools.Compressed-Class-Space.usage",
+  "jvm.pools.Compressed-Class-Space.used",
+  "jvm.pools.Metaspace.committed",
+  "jvm.pools.Metaspace.init",
+  "jvm.pools.Metaspace.max",
+  "jvm.pools.Metaspace.usage",
+  "jvm.pools.Metaspace.used",
+  "jvm.pools.PS-Eden-Space.committed",
+  "jvm.pools.PS-Eden-Space.init",
+  "jvm.pools.PS-Eden-Space.max",
+  "jvm.pools.PS-Eden-Space.usage",
+  "jvm.pools.PS-Eden-Space.used",
+  "jvm.pools.PS-Old-Gen.committed",
+  "jvm.pools.PS-Old-Gen.init",
+  "jvm.pools.PS-Old-Gen.max",
+  "jvm.pools.PS-Old-Gen.usage",
+  "jvm.pools.PS-Old-Gen.used",
+  "jvm.pools.PS-Survivor-Space.committed",
+  "jvm.pools.PS-Survivor-Space.init",
+  "jvm.pools.PS-Survivor-Space.max",
+  "jvm.pools.PS-Survivor-Space.usage",
+  "jvm.pools.PS-Survivor-Space.used",
+  "jvm.total.committed",
+  "jvm.total.init",
+  "jvm.total.max",
+  "jvm.total.used",
+  "master.aliveWorkers",
+  "master.apps",
+  "master.waitingApps",
+  "master.workers"
+]
+```
+
+A specific query can be made by using one of the values listed in the index
+and specifying the output type as well as time constraints. This output was
+generated by a `GET` request to
+`http://127.0.0.1:8000/render?target=jvm.heap.usage&format=json&from=-15minutes`.
+
+```
+[
+  {
+    "datapoints": [
+      [
+        null,
+        1507914360
+      ],
+      [
+        0.07,
+        1507914420
+      ],
+      [
+        0.08,
+        1507914480
+      ],
+      [
+        null,
+        1507914540
+      ],
+      [
+        null,
+        1507914600
+      ],
+      [
+        null,
+        1507914660
+      ],
+      [
+        0.03,
+        1507914720
+      ],
+      [
+        null,
+        1507914780
+      ],
+      [
+        null,
+        1507914840
+      ],
+      [
+        null,
+        1507914900
+      ],
+      [
+        null,
+        1507914960
+      ],
+      [
+        null,
+        1507915020
+      ],
+      [
+        null,
+        1507915080
+      ],
+      [
+        null,
+        1507915140
+      ],
+      [
+        null,
+        1507915200
+      ]
+    ],
+    "target": "jvm.heap.usage"
+  }
+]
+```
